@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IIT Bhubaneswar Hostel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Lusion-style Loader -->
+<div id="loader" class="loader">
+  <div class="loader-content">
+    <div class="loader-bar-bg">
+      <div class="loader-bar-fill" id="loaderBarFill"></div>
+      <span class="loader-percentage" id="loaderPercentage">0%</span>
+    </div>
+    <div class="loader-l-shape" id="loaderLShape">
+      <div class="l-vertical"></div>
+      <div class="l-horizontal"></div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">IIT Bhubaneswar Hostel</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#facilities">Facilities</a></li>
+      <li><a href="#rooms">Rooms</a></li>
+      <li><a href="#mess">Mess</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme-toggle" aria-label="Toggle light/dark mode">🌙</button>
+  </nav>
+
+  <!-- Hero Section with Animated Red Background -->
+  <section id="home" class="hero animated-bg">
+    <canvas id="hero3d-bg"></canvas>
+    <div class="hero-content">
+      <h1>Welcome to IIT Bhubaneswar Hostel</h1>
+      <p>Experience comfort, community, and convenience.</p>
+      <a href="#contact" class="btn-outline">Apply Now</a>
+    </div>
+    <div class="floating-shapes"></div>
+  </section>
+
+  <!-- Hostel Stats Graph Section -->
+  <section class="stats-section">
+    <div class="stats-card">
+      <div class="stats-header">
+        <div class="stats-filters">
+          <div class="filter-group">
+            <span>Type</span>
+            <button class="filter-btn active" data-type="all">All</button>
+            <button class="filter-btn" data-type="boys">Boys Hostel</button>
+            <button class="filter-btn" data-type="girls">Girls Hostel</button>
+          </div>
+          <div class="filter-group">
+            <span>Status</span>
+            <button class="filter-btn active" data-status="all">All</button>
+            <button class="filter-btn" data-status="occupied">Occupied</button>
+            <button class="filter-btn" data-status="available">Available</button>
+          </div>
+        </div>
+        <div class="stats-title-group">
+          <h2>Hostel & Facility Stats</h2>
+          <button class="download-btn" id="downloadChart" title="Download chart"><span>&#8681;</span> Download</button>
+        </div>
+        <div class="stats-legend">
+          <span class="legend-bar boys"></span> Boys Hostel
+          <span class="legend-bar girls"></span> Girls Hostel
+          <span class="legend-bar facility"></span> Facility
+        </div>
+      </div>
+      <canvas id="hostelStatsChart" width="800" height="350"></canvas>
+    </div>
+  </section>
+
+  <!-- Parallax Section -->
+  <section class="parallax-section">
+    <div class="parallax-layer layer1"></div>
+    <div class="parallax-layer layer2"></div>
+    <div class="parallax-layer layer3"></div>
+    <div class="parallax-layer layer4"></div>
+    <div class="parallax-layer layer5"></div>
+    <div class="parallax-layer layer6"></div>
+    <div class="parallax-layer layer7"></div>
+    <div class="parallax-content">
+      <h2>Hostel Life</h2>
+      <p>Experience the vibrant and diverse life at IIT Bhubaneswar hostels.</p>
+    </div>
+  </section>
+
+  <!-- Carousel Switch Section -->
+  <section class="carousel-section">
+    <div class="carousel-container">
+      <button class="carousel-arrow left" id="carouselPrev">&#8592;</button>
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-slide active">
+          <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=600&q=80" alt="Hostel Event">
+          <div class="carousel-caption">Annual Hostel Fest</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Study Night">
+          <div class="carousel-caption">Late Night Study Sessions</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Sports">
+          <div class="carousel-caption">Sports & Fitness</div>
+        </div>
+        <div class="carousel-slide">
+          <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80" alt="Community">
+          <div class="carousel-caption">Hostel Community</div>
+        </div>
+      </div>
+      <button class="carousel-arrow right" id="carouselNext">&#8594;</button>
+    </div>
+  </section>
+
+  <!-- Hostel Life Content Sections for Animations -->
+  <section class="hostel-content-section">
+    <div class="hostel-content-block">
+      <h2>Student Clubs & Activities</h2>
+      <p>Join a variety of student clubs, from coding and robotics to music and drama. Hostel life is full of opportunities to explore your interests and make lifelong friends.</p>
+    </div>
+    <div class="hostel-content-block">
+      <h2>Hostel Events</h2>
+      <p>Participate in annual hostel fests, cultural nights, and inter-hostel competitions. Every event is a celebration of diversity and talent.</p>
+    </div>
+    <div class="hostel-content-block">
+      <h2>Study Spaces</h2>
+      <p>Quiet study rooms and group discussion areas are available 24/7, ensuring you have the perfect environment for academic success.</p>
+    </div>
+    <div class="hostel-content-block">
+      <h2>Sports & Fitness</h2>
+      <p>Enjoy access to sports complexes, gymnasiums, and open grounds. Whether you play cricket, football, badminton, or just want to jog, there's something for everyone.</p>
+    </div>
+    <div class="hostel-content-block">
+      <h2>Mess & Food</h2>
+      <p>Relish a variety of cuisines in the hostel mess, with special menus for festivals and health-conscious options for fitness enthusiasts.</p>
+    </div>
+    <div class="hostel-content-block">
+      <h2>Nightlife & Community</h2>
+      <p>Late-night study sessions, group discussions, and midnight snacks foster a strong sense of community and belonging among hostel residents.</p>
+    </div>
+  </section>
+
+  <!-- Placeholder Sections -->
+  <section id="facilities"><!-- Facilities content here --></section>
+  <section id="rooms"><!-- Rooms content here --></section>
+  <section id="mess"><!-- Mess content here --></section>
+  <section id="activities"><!-- Activities content here --></section>
+  <section id="gallery"><!-- Gallery content here --></section>
+  <section id="testimonials"><!-- Testimonials content here --></section>
+  <section id="contact"><!-- Contact form here --></section>
+
+  <footer>
+    <p>&copy; 2024 IIT Bhubaneswar Hostel. All rights reserved.</p>
+  </footer>
+
+  <!-- About Us Section (bottom) -->
+  <section class="about-us-section">
+    <div class="about-us-grid">
+      <div class="about-us-item">Coding Club</div>
+      <div class="about-us-item">IIT Bhubaneswar</div>
+      <div class="about-us-item">Hostel Life</div>
+      <div class="about-us-item">Tech Fest</div>
+      <div class="about-us-item">Library</div>
+      <div class="about-us-item">Sports Arena</div>
+    </div>
+    <a href="#testimonials" class="about-us-btn" id="aboutUsBtn">Meet our students &rarr;</a>
+  </section>
+
+  <!-- Brand Kits Section (Bottom) -->
+  <section class="brand-kits-section">
+    <div class="brand-kits-card">
+      <h3 class="brand-kits-title">Brand Kits</h3>
+      <div class="brand-kit-list">
+        <div class="brand-kit-item selected">
+          <span class="brand-kit-checkbox checked"></span>
+          <span class="brand-kit-icons">
+            <span class="brand-dot" style="background:#fff;"></span>
+            <span class="brand-dot" style="background:#ff3b3b;"></span>
+            <span class="brand-dot" style="background:#6c63ff;"></span>
+          </span>
+          <span class="brand-kit-name">The Agency</span>
+          <span class="brand-kit-settings">&#9881;</span>
+        </div>
+        <div class="brand-kit-item">
+          <span class="brand-kit-checkbox"></span>
+          <span class="brand-kit-icons">
+            <span class="brand-dot" style="background:#fff;"></span>
+            <span class="brand-dot" style="background:#ffb300;"></span>
+            <span class="brand-dot" style="background:#222;"></span>
+          </span>
+          <span class="brand-kit-name">ICorp</span>
+          <span class="brand-kit-settings">&#9881;</span>
+        </div>
+        <div class="brand-kit-item">
+          <span class="brand-kit-checkbox"></span>
+          <span class="brand-kit-icons">
+            <span class="brand-dot" style="background:#fff;"></span>
+            <span class="brand-dot" style="background:#00c389;"></span>
+            <span class="brand-dot" style="background:#222;"></span>
+          </span>
+          <span class="brand-kit-name">ECorp</span>
+          <span class="brand-kit-settings">&#9881;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="ripple-cursor"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.min.js"></script>
+</body>
+</html> 
